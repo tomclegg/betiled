@@ -11,14 +11,14 @@ var home = {
               m('.container-fluid',
                 m('.collapse.navbar-collapse',
                   m('.navbar-header.navbar-left',
-                    m('a.navbar-brand[href="#"]', 'betiled!'))))),
+                    m('a.navbar-brand[href="#"]', {onclick: home.falsy}, 'betiled!'))))),
             m('.container',
-              m('form', {onsubmit: function() { return false }},
+              m('form', {onsubmit: home.falsy},
                 m('.form-group',
                   m('input.form-control', {value: ctrl.q(),
                                            name: 'q',
                                            oninput: m.withAttr('value', ctrl.q)}))),
-              m('form.form-inline', {onsubmit: function() { return false }},
+              m('form.form-inline', {onsubmit: home.falsy},
                 m('.form-group',
                   m('.input-group',
                     m('.input-group-addon', 'grout'),
@@ -74,6 +74,7 @@ var home = {
             }
         }
     },
+    falsy: function falsy() { return false },
 };
 
 m.route.mode = 'hash';
