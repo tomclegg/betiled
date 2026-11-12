@@ -67,7 +67,7 @@ var home = {
 	    var lines=s.split('\u2193');
 	    var ones=[];
 
-            window.history.replaceState({}, '', '/#/'+[s,grout(),zero(),one(),dropbits()].map(encodeURIComponent).join('/'))
+            window.history.replaceState({}, '', '#/'+[s,grout(),zero(),one(),dropbits()].map(encodeURIComponent).join('/'))
             var parentRect = el.parentElement.getBoundingClientRect()
             ctx.width = parentRect.width
             fullheight = Math.floor(el.getBoundingClientRect().height/h)*h
