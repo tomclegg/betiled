@@ -105,5 +105,6 @@ var home = {
 m.route.mode = 'hash';
 m.route(document.body, "/", {
     "/": home,
+    "/:q/:grout/:zero/:one": home,
     "/:q/:grout/:zero/:one/:dropbits": home,
 });
